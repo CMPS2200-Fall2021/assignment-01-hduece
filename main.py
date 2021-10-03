@@ -45,7 +45,7 @@ def combineLR(left,right):
         if right.is_entire_range == True:
             return(Result(left,(left+right.longest),max(left.longest_size,right.longest_size),False))
         else:
-            return(Results(left,right,max(left.longest_size,right.longest_size),False))
+            return(Result(left,right,max(left.longest_size,right.longest_size),False))
 
 def longest_run_recursive(mylist, key):
     #Base case: List size of one
