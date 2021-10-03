@@ -43,7 +43,7 @@ def combineLR(left,right):
             return(Result((left.longest_size+right.right_size),right,max(left.longest_size,right.longest_size),False))
     else:
         if right.is_entire_range == True:
-            return(Result(left,(left.rigth_size+right.longest),max(left.longest_size,right.longest_size),False))
+            return(Result(left,(left.right_size+right.longest),max(left.longest_size,right.longest_size),False))
         else:
             return(Result(left,right,max(left.longest_size,right.longest_size),False))
 
@@ -58,7 +58,6 @@ def longest_run_recursive(mylist, key):
         half = len(mylist)//2
         left = longest_run_recursive(mylist[:half],key)
         right = longest_run_recursive(mylist[half:],key)
-        print(left,right)
         xresult = combineLR(left,right)
     return xresult
 
