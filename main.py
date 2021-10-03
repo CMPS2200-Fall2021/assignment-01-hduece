@@ -35,7 +35,7 @@ class Result:
               (self.longest_size, self.left_size, self.right_size, self.is_entire_range))
     
  
-def combineLR(left,right)
+def combineLR(left,right):
     if left.is_entire_range == True: #Left is all key
         if right.is_entire_range == True: #and right is all key
             addlr = left + right
