@@ -39,13 +39,13 @@ def combineLR(left,right):
         if right.is_entire_range == True: #and right is all key
             addlr = left.left_size + right.left_size
             return(Result(addlr,addlr,addlr,True))
-        else: #right is not all key
+        else: #left all key right is not all key
             return(Result((left.longest_size+right.right_size),right,max(left.longest_size,right.longest_size),False))
-    else:
-        if right.is_entire_range == True:
+    else: #left not all key
+        if right.is_entire_range == True: #and right all key
             return(Result(left,(left.right_size+right.longest_size),max(left.longest_size,right.longest_size),False))
-        else:
-            return(Result(left,right,max(left.longest_size,right.longest_size),False))
+        else: #left not all key and right not all key
+            return(Result(left.left_size,right.right_size,max(left.longest_size,right.longest_size),False))
 
 def longest_run_recursive(mylist, key):
     #Base case: List size of one
