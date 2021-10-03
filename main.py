@@ -50,7 +50,7 @@ def combineLR(left,right):
 
 def longest_run_recursive(mylist, key):
     #Base case: List size of one
-    if len(mylist) = 1:
+    if len(mylist) == 1:
         if mylist(0) == key:
             xresult = Result(1,1,1,True)
         else:
