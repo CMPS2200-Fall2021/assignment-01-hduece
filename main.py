@@ -34,7 +34,6 @@ class Result:
         return('longest_size=%d left_size=%d right_size=%d is_entire_range=%s' %
               (self.longest_size, self.left_size, self.right_size, self.is_entire_range))
     
- 
 def combineLR(left,right):
     if left.is_entire_range == True: #Left is all key
         if right.is_entire_range == True: #and right is all key
@@ -59,7 +58,8 @@ def longest_run_recursive(mylist, key):
         half = len(mylist)//2
         left = longest_run_recursive(mylist[:half],key)
         right = longest_run_recursive(mylist[half:],key)
-        xresult = combineLR(left,right)
+    xresult = combineLR(left,right)
+    return xresult
 
 ## Feel free to add your own tests here.
 def test_longest_run():
