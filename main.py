@@ -16,8 +16,10 @@ def longest_run(mylist, key):
     for i in mylist:
         if i == key:
             current+=1
-        if current > longest:
-            longest = current
+            if current > longest:
+                longest = current
+        else:
+            current = 0   
     return(longest)
 
 class Result:
