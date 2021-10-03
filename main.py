@@ -58,6 +58,7 @@ def longest_run_recursive(mylist, key):
         half = len(mylist)//2
         left = longest_run_recursive(mylist[:half],key)
         right = longest_run_recursive(mylist[half:],key)
+        print(left,right)
     xresult = combineLR(left,right)
     return xresult
 
