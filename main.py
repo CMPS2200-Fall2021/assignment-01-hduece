@@ -14,10 +14,10 @@ def longest_run(mylist, key):
     longest = 0
     current = 0
     for i in mylist:
-        if i = key:
+        if i == key:
             current+=1
         if current > longest:
-            longest == current
+            longest = current
     return(longest)
 
 class Result:
