@@ -37,13 +37,13 @@ class Result:
 def combineLR(left,right):
     if left.is_entire_range == True: #Left is all key
         if right.is_entire_range == True: #and right is all key
-            addlr = left + right
+            addlr = left.left_size + right.left_size
             return(Result(addlr,addlr,addlr,True))
         else: #right is not all key
-            return(Result((left.longest_size+right),right,max(left.longest_size,right.longest_size),False))
+            return(Result((left.longest_size+right.right_size),right,max(left.longest_size,right.longest_size),False))
     else:
         if right.is_entire_range == True:
-            return(Result(left,(left+right.longest),max(left.longest_size,right.longest_size),False))
+            return(Result(left,(left.rigth_size+right.longest),max(left.longest_size,right.longest_size),False))
         else:
             return(Result(left,right,max(left.longest_size,right.longest_size),False))
 
